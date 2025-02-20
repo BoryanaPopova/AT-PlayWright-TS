@@ -10,23 +10,78 @@ header nav {
 }
 header nav ul {
     list-style-type: none;
+    height: 40px;
+    /* using Flexbox - repositions the elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 header nav ul li a {
     text-decoration: none;
     color: white;
+    /* margin-roght will add space wihtout extending the link. 
+    Padding-right will add space but will extend the link in the blank space */
+    margin-right: 15px;
+}
+header nav ul li a:hover {
+    color: #c8c8c8;
 }
 main {
     text-align: center;
 }
+main h1 {
+    /* short syntax for 10px 0 10px 0 - margin top and bottom 10xp and 0px left and right */
+    margin: 10px 0;
+}
+main .search-bar{
+    margin-bottom: 10px;
+}
+main .search-bar input {
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid #c7c7c7;
+}
+main .search-bar button {
+    padding: 3px; 
+    border-radius: 10px;
+    border: 1px solid #c7c7c7;
+    font-weight: 500;
+}
+main .search-bar button:hover {
+    cursor: pointer;
+    background-color: #c8c8c8;
+}
 main .img-container img {
     width: 250px;
     height: 200px;
+    /* rounding the corners */
+    border-radius: 10px;
+}
+main .img-container img:hover{
+    scale: 1.1;
 }
 main .description p {
     width: 500px;
+    /* equal amouunt of pixels on both sides. Different from the text-align: center. 
+    Read more for that */
+    margin: 0 auto;
+}
+main .description h3,
+main .description h4{
+    margin-bottom: 10px;
 }
 footer {
-    text-align: center;
+    width: 100%;
+    height: 50px;
     background-color: #333;
     color: white;
+    /* Explicit positioning of the elements */
+    position: fixed;
+    bottom: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+footer p {
+    color: #fff;
 }
