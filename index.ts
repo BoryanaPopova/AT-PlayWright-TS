@@ -71,3 +71,48 @@ stringValue = [10,20,30]
 console.log("stringValue", stringValue)
 
 // console.log("Hello, Typescript");
+
+//===================================== Conditional operators==========================================================
+
+// Ternary operator - best used with const type. THere is no logic to be able to reassign the value
+const isPositive: string =
+    5 > 0 ? "The number is positive" : "The number is negative";
+console.log(typeof  isPositive);
+
+const age: number = 50;
+const myName: string = "Pesho";
+const personDescription = age < 40 ?
+    `${myName} is younger than 40. He is ${age} years old.` :
+    `${myName} is older than 40. He is ${age} years old.`;
+
+// we can use double quotes in the string interpolation
+const personName = `His name is "${myName}".`
+
+const test: string = myName.length > 10 ?
+    "The text is longer that 10 symbols" : "The text is shorter than 10 symbols."
+
+
+// If Else statement. Often used in functions.
+
+if(age < 40) {
+    console.log("The age is lower than 49 years old")
+}
+else {
+    console.log("The age is grater than 40 years old.")
+}
+
+// Nested else if
+const num: number = 50;
+if(num < 10 ) {
+    console.log("The Number is lower than 10")
+} else  if(num > 100) {
+    console.log("The Number is greater than 100")
+} else {
+    console.log("The number is between 10 and 100")
+}
+
+// Declaring Types Alias and reusing them
+type PersonInfoType = string | number;
+
+const personNameInf: PersonInfoType = "Ivan";
+const personAgeInfo: PersonInfoType = 25;
