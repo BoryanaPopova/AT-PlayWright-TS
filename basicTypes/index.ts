@@ -116,3 +116,33 @@ type PersonInfoType = string | number;
 
 const personNameInf: PersonInfoType = "Ivan";
 const personAgeInfo: PersonInfoType = 25;
+
+type Status = "approved" | "rejected" | "pending"
+const currentStatus: Status = "approved"
+
+type PersonData = {
+    name: string;
+    lastName: string;
+    age: number;
+    city?: "Sofia" | "Varna" | "Plovdiv";
+}
+
+function displayPersonData({name, lastName, age, city}: PersonData){
+    if(city) {
+        return `${name} ${lastName} is from ${city}`;
+    }
+    return `${name} ${lastName} is ${age}`
+}
+
+let personOne: PersonData = {name: "Pesho", lastName: "Petrov", age: 25}
+console.log(displayPersonData(personOne));
+
+//Interface
+interface PersonalData {
+    name: string;
+    lastName: string;
+    age: number;
+    city: string;
+}
+
+// Types Alias VS Interface  - the interface check for the types as well. They support optional parameters.
