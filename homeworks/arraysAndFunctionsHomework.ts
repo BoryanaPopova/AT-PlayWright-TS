@@ -56,14 +56,12 @@ Use if/else statement to find the largest number. Log the result.
 function findLargest(a: number, b:number, c: number): number {
     if(a > b && a > c) {
         return a;
-    } else {
-        if(b > c) {
-                return b;
-            } else {
+    } else if(b > c){
+         return b;} 
+         else {
                 return c;
             }
-        }
-};
+        };
 
 console.log(findLargest(8,9,10));
 
